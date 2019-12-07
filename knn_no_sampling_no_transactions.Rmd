@@ -23,7 +23,9 @@ library(pROC)
 ```
 
 ```{r echo=FALSE}
-dataset <- read.csv("/Users/ccrowe/github/Milestone2/CleanDataset.csv")
+
+
+
 ```
 
 ```{r preprocess, echo=FALSE, warning=FALSE}
@@ -39,7 +41,7 @@ dataset <- read.csv("/Users/ccrowe/github/Milestone2/CleanDataset.csv")
 #dataset <- data_imputed_median
 #dataset= subset(dataset, select = -c(total_transactions))
 
-dataset <- head(dataset, 2000) # REMOVE LATER ON
+
 ```
 
 ```{r model_params, warning=FALSE}
@@ -52,9 +54,18 @@ model_form <- churned ~ .
 ```
 
 ```{r split, warning=FALSE}
-trainIndex <- createDataPartition(dataset[[target_var]], p = 0.7, list = FALSE)
-data_train <- dataset[trainIndex,]
-data_test <- dataset[-trainIndex,]
+#dataset <- read.csv("/Users/ccrowe/github/Milestone2/CleanDataset.csv")
+#dataset <- head(dataset, 2000) # REMOVE LATER ON
+#trainIndex <- createDataPartition(dataset[[target_var]], p = 0.7, list = FALSE)
+#data_train <- dataset[trainIndex,]
+#data_test <- dataset[-trainIndex,]
+
+data_train <- read.csv("/Users/ccrowe/github/Milestone2/CleanDataset_train.csv")
+data_test <- read.csv("/Users/ccrowe/github/Milestone2/CleanDataset_test.csv")
+
+data_train <- head(data_train, 300)
+data_test <- head(data_test, 100)
+
 ```
 
 ```{r knn, warning=FALSE}
