@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-12-07 Sat 09:31 -->
+<!-- 2019-12-07 Sat 14:12 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -246,12 +246,12 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org1fd7d52">1. ROC Values</a></li>
+<li><a href="#orge5d6ed9">1. ROC Values</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org1fd7d52" class="outline-2">
-<h2 id="org1fd7d52"><span class="section-number-2">1</span> ROC Values</h2>
+<div id="outline-container-orge5d6ed9" class="outline-2">
+<h2 id="orge5d6ed9"><span class="section-number-2">1</span> ROC Values</h2>
 <div class="outline-text-2" id="text-1">
 <dl class="org-dl">
 <dt>Model</dt><dd>KNN</dd>
@@ -262,14 +262,110 @@ I tested the k hyperparameters from 1 to 7.  A k of 1 always had the best
 performance.  
 </p>
 
-<ul class="org-ul">
-<li>0.5894 with k = 1 and no total<sub>transactions</sub></li>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">KNN Models</th>
+<th scope="col" class="org-left">transactions</th>
+<th scope="col" class="org-left">products</th>
+<th scope="col" class="org-left">transactions / products</th>
+<th scope="col" class="org-left">undersampling</th>
+<th scope="col" class="org-right">AUC</th>
+<th scope="col" class="org-right">K</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">Yes</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-right">0.579</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">-</td>
+<td class="org-left">Yes</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-right">0.589</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">Yes</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">Yes</td>
+<td class="org-right">0.591</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-left">-</td>
+<td class="org-left">Yes</td>
+<td class="org-left">-</td>
+<td class="org-left">Yes</td>
+<td class="org-right">0.557</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">Yes</td>
+<td class="org-left">Yes</td>
+<td class="org-right">0.581</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">Yes</td>
+<td class="org-left">-</td>
+<td class="org-right">0.537</td>
+<td class="org-right">1</td>
+</tr>
+</tbody>
+</table>
+
+<ul class="org-ul">
 <li>0.5788 with k = 1 with no total<sub>products</sub></li>
+
+<li>0.589 with k = 1 and no total<sub>transactions</sub></li>
 
 <li>0.591 with k = 1 with undersampling and no total<sub>products</sub></li>
 
 <li>0.557 with k = 1 and undersampling and no total<sub>transactions</sub></li>
+
+<li>0.581 with k = 1 and understampling and total<sub>transactions</sub> / total<sub>products</sub></li>
+
+<li>0.537 with k = 1 with no sampling and total<sub>transactions</sub> / total<sub>products</sub></li>
 </ul>
 
 <p>
@@ -280,7 +376,7 @@ no total transactions is a more simple metric with a similar performance as unde
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Chad Crowe</p>
-<p class="date">Created: 2019-12-07 Sat 09:31</p>
+<p class="date">Created: 2019-12-07 Sat 14:12</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
