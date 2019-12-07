@@ -49,9 +49,11 @@ data_imputed_median <- cbind(data_non_num, predict(pre_proc_impute_median, data_
 
 dataset <- data_imputed_median
 
+# Add Column
+dataset$ratio = dataset$total_transactions/dataset$total_products
 # Remove Columns
 dataset= subset(dataset, select = -c(total_transactions))
-#dataset= subset(dataset, select = -c(total_products))
+dataset= subset(dataset, select = -c(total_products))
 ```
 
 
@@ -75,8 +77,8 @@ data_test <- dataset[-trainIndex,]
 library(RANN)
 library(ISLR)
 library(caret)
-trControl <- trainControl(method = 'cv', number = 3, savePredictions = TRUE, classProbs = TRUE, summaryFunction = twoClassSummary, sampling = 'down')
-tuneGrid <- expand.grid(k = 1:1)
+trControl <- trainControl(method = 'cv', number = 3, savePredictions = TRUE, classProbs = TRUE, summaryFunction = twoClassSummary)#, sampling = 'down')
+tuneGrid <- expand.grid(k = 7:20)
 knn_fit <- train(as.formula(model_form), data = data_train, method = model_type, tuneGrid = tuneGrid,trControl = trControl, preProc = c("center", "scale"), metric = 'ROC')
 
 # let's predict its performance on the validation / test data
