@@ -1,0 +1,17 @@
+* ROC Values
+
+- Model :: KNN
+
+I tested the k hyperparameters from 1 to 7.  A k of 1 always had the best
+performance.  
+
+- 0.5894 with k = 1 and no total_transactions
+
+- 0.5788 with k = 1 with no total_products
+
+- 0.591 with k = 1 with undersampling and no total_products
+
+- 0.557 with k = 1 and undersampling and no total_transactions
+
+no total transactions is a more simple metric with a similar performance as undersampling.
+
