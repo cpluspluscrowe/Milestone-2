@@ -39,7 +39,7 @@ data_imputed_median <- cbind(data_non_num, predict(pre_proc_impute_median, data_
 dataset <- data_imputed_median
 dataset= subset(dataset, select = -c(total_products))
 
-dataset <- head(dataset, 1000) # REMOVE LATER ON
+#dataset <- head(dataset, 5000) # REMOVE LATER ON
 ```
 
 ```{r model_params, warning=FALSE}
