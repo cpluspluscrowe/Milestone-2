@@ -50,10 +50,10 @@ data_imputed_median <- cbind(data_non_num, predict(pre_proc_impute_median, data_
 dataset <- data_imputed_median
 
 # Add Column
-dataset$ratio = dataset$total_transactions/dataset$total_products
+#dataset$ratio = dataset$total_transactions/dataset$total_products
 # Remove Columns
 dataset= subset(dataset, select = -c(total_transactions))
-dataset= subset(dataset, select = -c(total_products))
+#dataset= subset(dataset, select = -c(total_products))
 ```
 
 
@@ -92,6 +92,12 @@ roc(data_test[[target_var]], knn_probs[, positive_class], plot = TRUE, print.auc
 #data_test <- read.csv("/Users/ccrowe/github/Milestone2/TestDataset.csv")
 summary(knn_fit)
 print("No Sampling No Transactions KNN")
+```
+
+```{r test_predictions}
+test <- read.csv("/Users/ccrowe/github/Milestone2/FinalTestData.csv")
+test_predictions <- knn_fit %>% predict(newdata = test, type = 'prob')
+
 ```
 
  [1] "X"                                "total_products"                  

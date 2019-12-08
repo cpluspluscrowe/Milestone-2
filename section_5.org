@@ -1,0 +1,11 @@
+
+
+* How does the performance of the different models compare against each other?
+* Which evaluation metrics did you use
+* Why did you use this evaluation metric?
+* How do you interpret the results?
+* What do they mean for the given project?
+* What are your recommendations for the client?
+* Why are these your recommendations for the client?
+* Which model did you use to create the predictions in your submission file?
+* What is your overall conclusion for the project and the data?
