@@ -1,7 +1,55 @@
 
 
 * How does the performance of the different models compare against each other?
+
+| Model   | Performance (AUC) |
+|---------+-------------------|
+| Boosted |             0.727 |
+| Lasso   |             0.713 |
+| KNN     |             0.591 |
+
+** How does the performance (AUC) vary within each model type
+
+The AUC for the Boosted models ranged from 0.713 to 0.726.  
+
+The AUC for Lasso ranged from 0.661 to 0.713.
+
+The AUC for KNN ranged from 0.537 to 0.591.  
+
+Within each type of model, the respective AUCs demonstrated a small variance.
+We learned in class that model performance can vary.  This variance is caused by
+the varying data in each cross-validation fold.  Each time random
+cross-validation folds are created and used to train/test, the model's
+performance will slightly vary.  The conclusion from the model's small AUC
+variance is that they all perform about equally well.  It is in our best
+interest to choose the most simple models/varianble combinations.  In the case
+of our models, it is best to use a single total transactions or total products
+variable instead of a combination of the two variables.  One variable is more
+simple and performs about as well.  
+
+** How does the performance (AUC) very between model types?
+
+Each model type performed differently.  The boosted tree performed the best,
+followed by the Lasso, and KNN performing the worst.  Boosted and Lasso had a
+similar AUC (0.727 vs 0.713).  This could mean each model learned the same data
+similarly well.  It could also denote that each model learned different aspect
+of the data, but in-the-end, reached a similar performance.  An ensemble model
+would demonstrate whether each model learned different facets of the data.  If
+the ensemble had a better performance, than it would demonstrate that each model
+provided an extent of mutually exclusive knowledge to the final ensemble model.
+
 * Which evaluation metrics did you use
+
+Our group optimized AUC for each model type.  We also compare the performance
+between each model type using AUC.  AUC is a good evaluation metric because it
+balances the model's specificity and sensitivity for all classification
+thresholds.  
+
+In our case, accuracy would have been a very poor evaluation metric.  Over 90%
+of the data is of one class type.  Each model would have a very high accuracy,
+but may have had a poor specificity or sensitivity.  By using AUC, we ensure the
+model is actually performing well predicting less frequent classifications correctly.
+
 * Why did you use this evaluation metric?
 * How do you interpret the results?
 * What do they mean for the given project?
