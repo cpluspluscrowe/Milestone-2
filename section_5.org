@@ -38,7 +38,7 @@ would demonstrate whether each model learned different facets of the data.  If
 the ensemble had a better performance, than it would demonstrate that each model
 provided an extent of mutually exclusive knowledge to the final ensemble model.
 
-* Which evaluation metrics did you use
+* Which evaluation metrics did you use and why?
 
 Our group optimized AUC for each model type.  We also compare the performance
 between each model type using AUC.  AUC is a good evaluation metric because it
@@ -50,10 +50,75 @@ of the data is of one class type.  Each model would have a very high accuracy,
 but may have had a poor specificity or sensitivity.  By using AUC, we ensure the
 model is actually performing well predicting less frequent classifications correctly.
 
-* Why did you use this evaluation metric?
 * How do you interpret the results?
+
+An AUC of 0.7 is good.  An AUC of 0.59 is fair but not good.  Our interpretation is that the Lasso and Boosted models
+learned a lot of the data. The KNN model struggled to classify the data based on
+other nearby data points.  
+
 * What do they mean for the given project?
+
+The 0.7 AUC gives us some confidence that we can give a good indication of churn
+based on the given data.  The prediction of churn is not highly accurate, but
+it may be useful for the client when deciding how likely a customer is to churn.
+Moreover, the predictions also come with class probabilities. The customer can
+use the probabilities to customize how they use the model.  For example, the company
+can choose a probability of churn threshold the company considers worth
+mitigating.  The company can then take steps to prevent a client from potential churn.
+
 * What are your recommendations for the client?
+
+The ROC is a nice curve, indicating an even tradeoff of sensitivity and
+specificity for each threshold.  At any classification threshold, the client can
+expect an even tradeoff for sensitivity and specificity.  Since company
+kickbacks, discounts, and other methods to prevent clients from churning can be
+expensive, the company may only choose to investigate clients who are the most
+likely to churn.  The company can
+use higher churn probabilities to ensure they only give kickbacks to clients
+likely who are likely to churn.  This saves the company money and prevents more
+likely true positives for churn from churning.  Another idea is to use a
+combination of churn probability with the revenue created by each client.  This
+way, the company take steps to prevent high revenue clients, who are likely to churn,
+from churning.  
+
 * Why are these your recommendations for the client?
+
+This project heavily focuses on the data science work.  The project is less
+focused on the business rules.  No one in the class works at the business or
+knows the businesses' ins and outs.  It is possible that the business values
+provide many kickbacks to customers.  It is also possible that the business, due
+to circumstances like a tigher budget, spends less time focused on ensuring a
+positive customer experience.  The lack of insider business knowledge adds some
+difficulty to the recommendations a data science from outside the business can
+make.  
+
+In our case, the most helpful recommendations we can make is clearly portraying
+the data and its implications.  A clear data presentation then allows the
+company to apply the data however they think it best.  The project context is
+also a little unique.  Instead of presenting to project leaders or managers, we
+are presenting our work to data scientists.  These data scientists are very
+familiar with what terms like ROC, sensitivity, and specificity mean and imply.
+This allows our group to focus more on result implications, rather than spending
+time explaining what each variable and number means.  
+
+
 * Which model did you use to create the predictions in your submission file?
+
+Our team agreed to use the model with the highest AUC.  The boosted tree had the
+highest AUC with cross-validation.  We applied this trained model to the test
+dataset and have included the csv results in our submission.  
+
 * What is your overall conclusion for the project and the data?
+
+We feel that the project was a success in both its preparation, execution, and
+results.  The project gave our group an opportunity to analyze data, prepare
+data, choose models, and both train and compare the models.  We gained a lot of
+experience applying class principles to the project.  We examined correlated
+variables, performed regularization, included cross-validation, evaluated model
+performance on a test set, and compared the results of multiple machine learning
+models.  The project served as a great experience applying our skills and
+solidifying our learnings from the semester.  Our semester learnings allowed us
+to apply a data science's perspective to the data, training, and evaluating of
+the models.  The result were three performant models, but one most performant
+model.  The model learned the input data well and serves as a good indication
+for churn.  

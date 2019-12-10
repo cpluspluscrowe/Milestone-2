@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-12-08 Sun 13:26 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Chad Crowe" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org66e6592">1. How does the performance of the different models compare against each other?</a>
+<ul>
+<li><a href="#org082a428">1.1. How does the performance (AUC) vary within each model type</a></li>
+<li><a href="#org6905acd">1.2. How does the performance (AUC) very between model types?</a></li>
+</ul>
+</li>
+<li><a href="#org620fce8">2. Which evaluation metrics did you use and why?</a></li>
+<li><a href="#orgb8900a8">3. How do you interpret the results?</a></li>
+<li><a href="#orgc8662ac">4. What do they mean for the given project?</a></li>
+<li><a href="#org9a310e2">5. What are your recommendations for the client?</a></li>
+<li><a href="#org69302fe">6. Why are these your recommendations for the client?</a></li>
+<li><a href="#org37f212d">7. Which model did you use to create the predictions in your submission file?</a></li>
+<li><a href="#org5dccaa8">8. What is your overall conclusion for the project and the data?</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org66e6592" class="outline-2">
+<h2 id="org66e6592"><span class="section-number-2">1</span> How does the performance of the different models compare against each other?</h2>
+<div class="outline-text-2" id="text-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Model</th>
+<th scope="col" class="org-right">Performance (AUC)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Boosted</td>
+<td class="org-right">0.727</td>
+</tr>
+
+<tr>
+<td class="org-left">Lasso</td>
+<td class="org-right">0.713</td>
+</tr>
+
+<tr>
+<td class="org-left">KNN</td>
+<td class="org-right">0.591</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="outline-container-org082a428" class="outline-3">
+<h3 id="org082a428"><span class="section-number-3">1.1</span> How does the performance (AUC) vary within each model type</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+The AUC for the Boosted models ranged from 0.713 to 0.726.  
+</p>
+
+<p>
+The AUC for Lasso ranged from 0.661 to 0.713.
+</p>
+
+<p>
+The AUC for KNN ranged from 0.537 to 0.591.  
+</p>
+
+<p>
+Within each type of model, the respective AUCs demonstrated a small variance.
+We learned in class that model performance can vary.  This variance is caused by
+the varying data in each cross-validation fold.  Each time random
+cross-validation folds are created and used to train/test, the model's
+performance will slightly vary.  The conclusion from the model's small AUC
+variance is that they all perform about equally well.  It is in our best
+interest to choose the most simple models/varianble combinations.  In the case
+of our models, it is best to use a single total transactions or total products
+variable instead of a combination of the two variables.  One variable is more
+simple and performs about as well.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6905acd" class="outline-3">
+<h3 id="org6905acd"><span class="section-number-3">1.2</span> How does the performance (AUC) very between model types?</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Each model type performed differently.  The boosted tree performed the best,
+followed by the Lasso, and KNN performing the worst.  Boosted and Lasso had a
+similar AUC (0.727 vs 0.713).  This could mean each model learned the same data
+similarly well.  It could also denote that each model learned different aspect
+of the data, but in-the-end, reached a similar performance.  An ensemble model
+would demonstrate whether each model learned different facets of the data.  If
+the ensemble had a better performance, than it would demonstrate that each model
+provided an extent of mutually exclusive knowledge to the final ensemble model.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org620fce8" class="outline-2">
+<h2 id="org620fce8"><span class="section-number-2">2</span> Which evaluation metrics did you use and why?</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Our group optimized AUC for each model type.  We also compare the performance
+between each model type using AUC.  AUC is a good evaluation metric because it
+balances the model's specificity and sensitivity for all classification
+thresholds.  
+</p>
+
+<p>
+In our case, accuracy would have been a very poor evaluation metric.  Over 90%
+of the data is of one class type.  Each model would have a very high accuracy,
+but may have had a poor specificity or sensitivity.  By using AUC, we ensure the
+model is actually performing well predicting less frequent classifications correctly.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb8900a8" class="outline-2">
+<h2 id="orgb8900a8"><span class="section-number-2">3</span> How do you interpret the results?</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+An AUC of 0.7 is good.  An AUC of 0.59 is fair but not good.  Our interpretation is that the Lasso and Boosted models
+learned a lot of the data. The KNN model struggled to classify the data based on
+other nearby data points.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc8662ac" class="outline-2">
+<h2 id="orgc8662ac"><span class="section-number-2">4</span> What do they mean for the given project?</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+The 0.7 AUC gives us some confidence that we can give a good indication of churn
+based on the given data.  The prediction of churn is not highly accurate, but
+it may be useful for the client when deciding how likely a customer is to churn.
+Moreover, the predictions also come with class probabilities. The customer can
+use the probabilities to customize how they use the model.  For example, the company
+can choose a probability of churn threshold the company considers worth
+mitigating.  The company can then take steps to prevent a client from potential churn.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a310e2" class="outline-2">
+<h2 id="org9a310e2"><span class="section-number-2">5</span> What are your recommendations for the client?</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+The ROC is a nice curve, indicating an even tradeoff of sensitivity and
+specificity for each threshold.  At any classification threshold, the client can
+expect an even tradeoff for sensitivity and specificity.  Since company
+kickbacks, discounts, and other methods to prevent clients from churning can be
+expensive, the company may only choose to investigate clients who are the most
+likely to churn.  The company can
+use higher churn probabilities to ensure they only give kickbacks to clients
+likely who are likely to churn.  This saves the company money and prevents more
+likely true positives for churn from churning.  Another idea is to use a
+combination of churn probability with the revenue created by each client.  This
+way, the company take steps to prevent high revenue clients, who are likely to churn,
+from churning.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org69302fe" class="outline-2">
+<h2 id="org69302fe"><span class="section-number-2">6</span> Why are these your recommendations for the client?</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+This project heavily focuses on the data science work.  The project is less
+focused on the business rules.  No one in the class works at the business or
+knows the businesses' ins and outs.  It is possible that the business values
+provide many kickbacks to customers.  It is also possible that the business, due
+to circumstances like a tigher budget, spends less time focused on ensuring a
+positive customer experience.  The lack of insider business knowledge adds some
+difficulty to the recommendations a data science from outside the business can
+make.  
+</p>
+
+<p>
+In our case, the most helpful recommendations we can make is clearly portraying
+the data and its implications.  A clear data presentation then allows the
+company to apply the data however they think it best.  The project context is
+also a little unique.  Instead of presenting to project leaders or managers, we
+are presenting our work to data scientists.  These data scientists are very
+familiar with what terms like ROC, sensitivity, and specificity mean and imply.
+This allows our group to focus more on result implications, rather than spending
+time explaining what each variable and number means.  
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org37f212d" class="outline-2">
+<h2 id="org37f212d"><span class="section-number-2">7</span> Which model did you use to create the predictions in your submission file?</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Our team agreed to use the model with the highest AUC.  The boosted tree had the
+highest AUC with cross-validation.  We applied this trained model to the test
+dataset and have included the csv results in our submission.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5dccaa8" class="outline-2">
+<h2 id="org5dccaa8"><span class="section-number-2">8</span> What is your overall conclusion for the project and the data?</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+We feel that the project was a success in both its preparation, execution, and
+results.  The project gave our group an opportunity to analyze data, prepare
+data, choose models, and both train and compare the models.  We gained a lot of
+experience applying class principles to the project.  We examined correlated
+variables, performed regularization, included cross-validation, evaluated model
+performance on a test set, and compared the results of multiple machine learning
+models.  The project served as a great experience applying our skills and
+solidifying our learnings from the semester.  Our semester learnings allowed us
+to apply a data science's perspective to the data, training, and evaluating of
+the models.  The result were three performant models, but one most performant
+model.  The model learned the input data well and serves as a good indication
+for churn.  
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Chad Crowe</p>
+<p class="date">Created: 2019-12-08 Sun 13:26</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
